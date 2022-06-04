@@ -9,7 +9,6 @@ class OrdersController < ApplicationController
     @items = Item.all.order(:created_at)
   end
 
-  
   def create
     @order = current_user.orders.build(order_params)
     @order.save
